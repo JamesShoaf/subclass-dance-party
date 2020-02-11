@@ -1,5 +1,5 @@
-// var lineDance = function() {
-//   for (let i = 0; i < window.dancers.length; i++) {
-//     $(`#${i}`).css('top', '200px'); // assign to window height/2
-//   }
-// };
+var lineDance = function() {
+  var halfwayDown = $('body').height() / 2;
+
+  $('.dancer').css('top', halfwayDown + 'px'); // assign to window height/2
+};
