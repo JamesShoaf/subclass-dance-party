@@ -17,6 +17,7 @@ describe('blinkyDancer', function() {
     blinkyDancer.step();
     expect(blinkyDancer.$node.toggle.called).to.be.true;
   });
+  
 
   describe('dance', function() {
     it('should call step at least once per second', function() {
@@ -30,5 +31,8 @@ describe('blinkyDancer', function() {
       clock.tick(timeBetweenSteps);
       expect(blinkyDancer.step.callCount).to.be.equal(2);
     });
+
+
   });
+
 });
