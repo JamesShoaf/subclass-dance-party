@@ -1,5 +1,8 @@
 $(document).ready(function() {
   window.dancers = [];
+  //for each dancer, reassign height to window.height
+  window.height = $('body').height();
+  window.width = $('body').width();
 
   $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
@@ -23,11 +26,20 @@ $(document).ready(function() {
     // make a dancer with a random position
 
     var dancer = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
+      $('body').height() * Math.random(),
+      $('body').width() * Math.random(),
       Math.random() * 1000
     );
+    window.dancers.push(dancer);
     $('body').append(dancer.$node);
   });
+
+  var lineDance = function() {
+    for (let i = 0; i < window.dancers.length; i++) {
+      $(`#${i}`).css('top', '200px'); // assign to window height/2
+    }
+  };
+
+  $('#lineDance').on('click', lineDance());
 });
 
