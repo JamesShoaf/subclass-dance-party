@@ -4,11 +4,11 @@ describe('lineDance', function() {
 
   beforeEach(function() {
     dancers = window.dancers;
-    blinkyDancer1 = new makeBlinkyDancer(10, 20, timeBetweenSteps);
+    blinkyDancer1 = new BlinkyDancer(10, 20, timeBetweenSteps);
   });
 
   it('should check the height of a dancer', function() {
-    expect(blinkyDancer1);
+    expect(window.dancers[0]);
   });
 
 });

@@ -1,4 +1,5 @@
 var Dancer = function(top, left, timeBetweenSteps) {
+  this.id = `${parseInt(top)}${parseInt(timeBetweenSteps)}`;
   this.timeBetweenSteps = timeBetweenSteps;
   //this.$node = $('<span class="dancer"></span>');
   this.step();
@@ -7,8 +8,7 @@ var Dancer = function(top, left, timeBetweenSteps) {
 };
 
 Dancer.prototype.step = function() {
-  var dancer = this;
-  setTimeout(dancer.step.bind(dancer), dancer.timeBetweenSteps);
+  setTimeout(this.step.bind(this), this.timeBetweenSteps);
 };
 
 Dancer.prototype.setPosition = function(top, left) {

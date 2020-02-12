@@ -1,18 +1,30 @@
+html {
+  background: url('https://cache.marriott.com/marriottassets/marriott/PHXDR/phxdr-ballroom-0156-hor-feat.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 body, html{
   height:100%;
 }
 body{
   margin: 0px;
-  background-color:#444;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
+#lineDanceButton{
+  padding:5px 12px;
+  float:left;
+}
 .title, .addDancerButton{
   padding:5px 12px;
   float:right;
 }
+
 .topbar{
   height:32px;
   background-color: #555;
@@ -31,9 +43,9 @@ body, a:link, a:visited, a:active{
 }
 
 .twisty {
-  border:20px solid green;
-  border-radius: 20px;
+  width:100px;
   position:absolute;
+  border:none
 
 }
 
@@ -43,3 +55,13 @@ body, a:link, a:visited, a:active{
   background: green;
   position: relative;
 }
+a:hover {
+  color:orange;
+}
+
+.interactive {
+  width:35px;
+  height:35px;
+  color: gray
+}
+
